@@ -1,0 +1,4 @@
+<!doctype html><meta charset="utf-8"><title>zf relay</title>
+<script>
+(async()=>{const u=new URLSearchParams(location.search).get('f');try{parent.postMessage({zf:1,stage:'loaded'},'*');const r=await fetch(u);const buf=await r.arrayBuffer();parent.postMessage({zf:1,stage:'data',buf},'*',[buf]);}catch(e){parent.postMessage({zf:1,stage:'err',err:String(e)},'*');}})();
+</script>
